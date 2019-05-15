@@ -49,8 +49,8 @@ public class DozePulseAction implements SensorAction, ScreenStateNotifier {
     public void action() {
         if (mayDoze()) {
             Log.d(TAG, "Sending doze.pulse intent");
-            mContext.sendBroadcastAsUser(new Intent("com.android.systemui.doze.pulse"),
-                new UserHandle(UserHandle.USER_CURRENT));
+            Intent pulseIntent = new Intent("com.android.systemui.doze.pulse");
+            mContext.sendBroadcastAsUser(pulseIntent, UserHandle.CURRENT);
         }
     }
 
