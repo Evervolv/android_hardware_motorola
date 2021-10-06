@@ -18,7 +18,9 @@
 package org.lineageos.settings.device;
 
 import android.os.Bundle;
+
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.R;
 
 public class ActionsPreferenceActivity extends CollapsingToolbarBaseActivity {
 
@@ -27,7 +29,7 @@ public class ActionsPreferenceActivity extends CollapsingToolbarBaseActivity {
         super.onCreate(savedInstanceState);
         getFragmentManager()
                 .beginTransaction()
-                .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, new ActionsPreferenceFragment())
+                .replace(R.id.content_frame, new ActionsPreferenceFragment())
                 .commit();
     }
 }
