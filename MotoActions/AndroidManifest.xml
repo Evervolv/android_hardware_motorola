@@ -39,7 +39,6 @@
             android:label="@string/ambient_display_gestures_title"
             android:theme="@style/Theme.SubSettingsBase"
             android:exported="false">
-
         </activity>
 
         <activity
