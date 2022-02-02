@@ -34,7 +34,6 @@ import org.lineageos.settings.device.actions.ProximitySilencer;
 import org.lineageos.settings.device.actions.UpdatedStateNotifier;
 import org.lineageos.settings.device.doze.DozePulseAction;
 import org.lineageos.settings.device.doze.GlanceSensor;
-import org.lineageos.settings.device.doze.ProximitySensor;
 import org.lineageos.settings.device.doze.FlatUpSensor;
 import org.lineageos.settings.device.doze.ScreenStateNotifier;
 import org.lineageos.settings.device.doze.StowSensor;
@@ -63,7 +62,6 @@ public class MotoActionsService extends Service implements ScreenStateNotifier,
 
         // Actionable sensors get screen on/off notifications
         mScreenStateNotifiers.add(new GlanceSensor(actionsSettings, sensorHelper, dozePulseAction));
-        mScreenStateNotifiers.add(new ProximitySensor(actionsSettings, sensorHelper, dozePulseAction));
         mScreenStateNotifiers.add(new StowSensor(actionsSettings, sensorHelper, dozePulseAction));
         mScreenStateNotifiers.add(new FlatUpSensor(actionsSettings, sensorHelper, dozePulseAction));
 
